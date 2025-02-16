@@ -149,7 +149,7 @@ class Obj_Class {
     // Modifiers
     public void Modifiers() {
         System.out.println(
-                "//We divide modifiers into two groups:\n//Access Modifiers - controls the access level\n//Non-Access Modifiers - do not control access level, but provides other functionality");
+                "//We divide modifiers into two groups:\n//Access Modifiers - controls the access level\n//Non-Access Modifiers - do not control access level, but provides other functionality\n//for classes\nModifier       Description\npublic        \tThe class is accessible by any other class\ndefault        The class is only accessible by classes in the same package. This is used when you don't specify a modifier.\nFor attributes, methods and constructors\nModifier        Description\npublic      The code is accessible for all classes\nprivate        The code is only accessible within the declared class\ndefault      The code is only accessible in the same package. This is used when you don't specify a modifier.\nprotected      The code is accessible in the same package and subclasses.\nFor attributes and methods\nModifier       Description\nfinal      Attributes andd methode cannot be overridden/modified\nstatic       Attributes and methods belongs to the class, rather than an object\nabstract        Can only be used in an abstract class, and can only be used on methods. The method does not have a body, for example abstract void run();. The body is provided by the subclass (inherited from).\ntransient        Attributes and methods are skipped when serializing the object containing them\nsynchronized        Methods can only be accessed by one thread at a time\nvolatile      The value of an attribute is not cached thread-locally, and is always read from the \"main memory\"");
     }
 }
 
@@ -288,7 +288,7 @@ public class PSyntax {
                 break;
             case 7:
                 System.out.println(
-                        "1)Class\n2)Objects\n3)atributes & methode\n4)Constructor\n5)Constructor with parameters");
+                        "1)Class\n2)Objects\n3)atributes & methode\n4)Constructor\n5)Constructor with parameters\n6)Atributes Method\n7)Modifiers");
                 int o = sc.nextInt();
                 switch (o) {
                     case 1:
@@ -308,14 +308,20 @@ public class PSyntax {
                         break;
                     case 6:
                         O.Atributes_Method();
+                        break;
+                    case 7:
+                        O.Modifiers();
                     default:
                         break;
                 }
                 break;
+
             default:
                 break;
+
         }
         // }
         sc.close();
+        
     }
 }
