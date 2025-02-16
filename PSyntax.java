@@ -88,47 +88,70 @@ class Loops {
         System.out.println("for(//initialization;//condition;//increment){\n//statement\n}");
     }
 }
-//Break & continue
-class Break{
-    public void _break(){
+
+// Break & continue
+class Break {
+    public void _break() {
         System.out.println("while(//Condition){\n//Statement to be executed\nbreak;\n}");
     }
-    public void _continue(){
+
+    public void _continue() {
         System.out.println("while(//Condition){\n//Statement to be executed\ncontinue;\n}");
     }
 }
 // Methods
 
-class Methods{
-    public void Methode(){
-        System.out.println("public class Main{\nstatic void myMethode(){\n//code to be executed\n   }\npublic static void main(String[] args){\nmyMethode();\n  }\n}");
+class Methods {
+    public void Methode() {
+        System.out.println(
+                "public class Main{\nstatic void myMethode(){\n//code to be executed\n   }\npublic static void main(String[] args){\nmyMethode();\n  }\n}");
     }
-    public void Methode_Parameter(){
-        System.out.println("public class Main{\nstatic void myMethode(parameter1(ex-int 1),parameter2(ex int num2)){\n//code to be executed\n   }\npublic static void main(String[] args){\nmyMethode();\n  }\n}");
-        System.out.println("//return type\npublic class Main{\nstatic int myMethode(parameter1(ex-int 1),parameter2(ex int num2)){\n//code to be executed \nreturn value;\n   }\npublic static void main(String[] args){\nmyMethode();}\n}");
+
+    public void Methode_Parameter() {
+        System.out.println(
+                "public class Main{\nstatic void myMethode(parameter1(ex-int 1),parameter2(ex int num2)){\n//code to be executed\n   }\npublic static void main(String[] args){\nmyMethode();\n  }\n}");
+        System.out.println(
+                "//return type\npublic class Main{\nstatic int myMethode(parameter1(ex-int 1),parameter2(ex int num2)){\n//code to be executed \nreturn value;\n   }\npublic static void main(String[] args){\nmyMethode();}\n}");
     }
-    public void Methode_Overloading(){
-        System.out.println("int myMethod(int x){\ncode to executed\n}\nint myMethode(int x,int y){\ncode to execute}\n");
+
+    public void Methode_Overloading() {
+        System.out
+                .println("int myMethod(int x){\ncode to executed\n}\nint myMethode(int x,int y){\ncode to execute}\n");
     }
 }
-// Objects and classes
-class Obj_Class{
-    public void Class(){
+// OPPs
+
+class Obj_Class {
+    public void Class() {
         System.out.println("// To create a class \nclass MyClass{\n//class atributes and methodes\n}");
     }
-    public void Obj(){
-        System.out.println("//To create  objects\npublic class main{\npublic static void main(String[] args){\nMyClass Car=new MyClass //now we can use this object created\n  }\n} ");
-    }
-    public void Atributes_Method(){
-        System.out.println("//atributes & methodes are defined under a class\nclass MyClass{\nString Car;\nint model\n//We can also define methodes inside the classs\n public void MyMethod(){\n   }\n}");
-    }
-    public void Constructor(){
-        System.out.println("//Constructors are special method ");
+
+    public void Obj() {
+        System.out.println(
+                "//To create  objects\npublic class main{\npublic static void main(String[] args){\nMyClass Car=new MyClass //now we can use this object created\n  }\n} ");
     }
 
+    public void Atributes_Method() {
+        System.out.println(
+                "//atributes & methodes are defined under a class\nclass MyClass{\nString Car;\nint model;\n//We can also define methodes inside the classs\n public void MyMethod(){\n //Code to be executed\n  }\n}");
+    }
+
+    public void Constructor() {
+        System.out.println(
+                "//Constructors are special method \nNote that the constructor name must match the class name, and it cannot have a return type (like void).");
+    }
+
+    public void Constructor_p() {
+        System.out.println(
+                "//Constructor parameter\nclass MyClass{\npublic int MyClass(int parameter_1,int parameter_2){\nthis.parameter_1=parameter_1;\nthis.parameter_2=parameter_2;\n   }\n}");
+    }
+
+    // Modifiers
+    public void Modifiers() {
+        System.out.println(
+                "//We divide modifiers into two groups:\n//Access Modifiers - controls the access level\n//Non-Access Modifiers - do not control access level, but provides other functionality");
+    }
 }
-
-
 
 public class PSyntax {
     static void Basic() {
@@ -142,9 +165,9 @@ public class PSyntax {
         Operators OP = new Operators();
         Condition Con = new Condition();
         Loops l = new Loops();
-        Break B=new Break();
-        Methods M=new Methods();
-        Obj_Class O=new Obj_Class();
+        Break B = new Break();
+        Methods M = new Methods();
+        Obj_Class O = new Obj_Class();
 
         System.out.println("1)Basic syntax for java");
         System.out.println("2)Operators");
@@ -192,7 +215,7 @@ public class PSyntax {
                         break;
                 }
                 break;
-                // If statements in java
+            // If statements in java
 
             case 3:
                 System.out.println("1)if \n2)else\n3)else if");
@@ -232,53 +255,59 @@ public class PSyntax {
                         break;
                 }
                 break;
-                case 5:
+            case 5:
                 System.out.println("1)break\n2)continue");
-                int S=sc.nextInt();
+                int S = sc.nextInt();
                 switch (S) {
                     case 1:
-                    B._break();
-                    break;
-                    case 2:
-                    B._continue();
-                    break;
-                    default:
+                        B._break();
                         break;
-                }
-            break;
-                case 6:
-                System.out.println("1)Method \n2)Method parameter\n3)Method Overloading");
-                int m=sc.nextInt();
-                switch (m) {
-                    case 1:
-                    M.Methode();
-                        break;
-
                     case 2:
-                    M.Methode_Parameter();
-                    break;
-                    case 3:
-                    M.Methode_Overloading();
+                        B._continue();
+                        break;
                     default:
                         break;
                 }
                 break;
-                case 7:
-                System.out.println("1)Class\n2)Objects\n3)atributes & methode\n4)Constructor");
-                int o=sc.nextInt();
+            case 6:
+                System.out.println("1)Method \n2)Method parameter\n3)Method Overloading");
+                int m = sc.nextInt();
+                switch (m) {
+                    case 1:
+                        M.Methode();
+                        break;
+
+                    case 2:
+                        M.Methode_Parameter();
+                        break;
+                    case 3:
+                        M.Methode_Overloading();
+                    default:
+                        break;
+                }
+                break;
+            case 7:
+                System.out.println(
+                        "1)Class\n2)Objects\n3)atributes & methode\n4)Constructor\n5)Constructor with parameters");
+                int o = sc.nextInt();
                 switch (o) {
                     case 1:
                         O.Class();
                         break;
                     case 2:
-                    O.Obj();
-                    break;
+                        O.Obj();
+                        break;
                     case 3:
-                    O.Atributes_Method();
-                    break;
+                        O.Atributes_Method();
+                        break;
                     case 4:
-                    O.Constructor();
-                    break;
+                        O.Constructor();
+                        break;
+                    case 5:
+                        O.Constructor_p();
+                        break;
+                    case 6:
+                        O.Atributes_Method();
                     default:
                         break;
                 }
