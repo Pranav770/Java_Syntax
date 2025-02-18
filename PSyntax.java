@@ -149,7 +149,33 @@ class Obj_Class {
     // Modifiers
     public void Modifiers() {
         System.out.println(
-                "//We divide modifiers into two groups:\n//Access Modifiers - controls the access level\n//Non-Access Modifiers - do not control access level, but provides other functionality\n//for classes\nModifier       Description\npublic        \tThe class is accessible by any other class\ndefault        The class is only accessible by classes in the same package. This is used when you don't specify a modifier.\nFor attributes, methods and constructors\nModifier        Description\npublic      The code is accessible for all classes\nprivate        The code is only accessible within the declared class\ndefault      The code is only accessible in the same package. This is used when you don't specify a modifier.\nprotected      The code is accessible in the same package and subclasses.\nFor attributes and methods\nModifier       Description\nfinal      Attributes andd methode cannot be overridden/modified\nstatic       Attributes and methods belongs to the class, rather than an object\nabstract        Can only be used in an abstract class, and can only be used on methods. The method does not have a body, for example abstract void run();. The body is provided by the subclass (inherited from).\ntransient        Attributes and methods are skipped when serializing the object containing them\nsynchronized        Methods can only be accessed by one thread at a time\nvolatile      The value of an attribute is not cached thread-locally, and is always read from the \"main memory\"");
+                "// We divide modifiers into two groups:\n" +
+"// Access Modifiers - controls the access level\n" +
+"// Non-Access Modifiers - do not control access level, but provide other functionality\n" +
+"// for classes\n" +
+"Modifier       Description\n" +
+"public         The class is accessible by any other class\n" +
+"default        The class is only accessible by classes in the same package. This is used when you don't specify a modifier.\n\n" +
+"// For attributes, methods, and constructors\n" +
+"Modifier        Description\n" +
+"public          The code is accessible for all classes\n" +
+"private         The code is only accessible within the declared class\n" +
+"default         The code is only accessible in the same package. This is used when you don't specify a modifier.\n" +
+"protected       The code is accessible in the same package and subclasses.\n\n" +
+"// For attributes and methods\n" +
+"Modifier        Description\n" +
+"final           Attributes and methods cannot be overridden/modified\n" +
+"static          Attributes and methods belong to the class, rather than an object\n" +
+"abstract        Can only be used in an abstract class, and can only be used on methods. The method does not have a body (e.g., abstract void run();). The body is provided by the subclass (inherited from).\n" +
+"transient       Attributes and methods are skipped when serializing the object containing them\n" +
+"synchronized    Methods can only be accessed by one thread at a time\n" +
+"volatile       The value of an attribute is not cached thread-locally, and is always read from the \"main memory\"");
+    }
+    public void Encapssulation(){
+        System.out.println("The meaning of Encapsulation, is to make sure that \"sensitive\" data is hidden from users. To achieve this,we must\n1)declare class variables/attributes as private\n2)provide public get and set methods to access and update the value of a private variable\nGet and Set\nit is possible to access private class if we provide public get and set methodes.\nThe get method returns the variable value, and the set method sets the value.\nSyntax for both is that they start with either get or set, followed by the name of the variable, with the first letter in upper case\n//Code\npublic class  MyName{\nprivate String name;\n//Getter\npublic String getName(){\nreturn name;\n  }\n//Setter \npublic void setName(String name){\nthis.name=name;\n    }\n}");
+    }
+    public void Inheritance(){
+        System.out.println("In Java, it is possible to inherit attributes and methods from one class to another. We group the \"inheritance concept\" into two categories:\n1)subclass (child) - the class that inherits from another class\nsuperclass (parent) - the class being inherited from\nextends is the keyword to inherit class\n//Code\nclass Vehicle{\n String brand =\"Ford\";\npublic void horn(){\nSystem.out.println(\"pee,pee!\")\n   }\n}\nclass Car extends Vehicle{\nString modelName=\"Mustang\";\n}\npublic class Main{\npublic static void main(String[] args){\nCar myCar=new Car();\nmyCar.horn();\nSystem.out.println(myCar.brand + \" \" + myCar.modelName);\n   }\n}");
     }
 }
 
@@ -288,7 +314,7 @@ public class PSyntax {
                 break;
             case 7:
                 System.out.println(
-                        "1)Class\n2)Objects\n3)atributes & methode\n4)Constructor\n5)Constructor with parameters\n6)Atributes Method\n7)Modifiers");
+                        "1)Class\n2)Objects\n3)atributes & methode\n4)Constructor\n5)Constructor with parameters\n6)Atributes Method\n7)Modifiers\n8)Encapsulation\n9)Inheritance");
                 int o = sc.nextInt();
                 switch (o) {
                     case 1:
@@ -311,17 +337,24 @@ public class PSyntax {
                         break;
                     case 7:
                         O.Modifiers();
+                        break;
+                    case 8:
+                        O.Encapssulation();
+                        break;
+                    case 9:
+                        O.Inheritance();
+                        break;
                     default:
+                    
                         break;
                 }
                 break;
-
+                
             default:
                 break;
 
         }
         // }
-        sc.close();
-        
+        sc.close();     
     }
 }
