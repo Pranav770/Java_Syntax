@@ -177,6 +177,12 @@ class Obj_Class {
     public void Inheritance(){
         System.out.println("In Java, it is possible to inherit attributes and methods from one class to another. We group the \"inheritance concept\" into two categories:\n1)subclass (child) - the class that inherits from another class\nsuperclass (parent) - the class being inherited from\nextends is the keyword to inherit class\n//Code\nclass Vehicle{\n String brand =\"Ford\";\npublic void horn(){\nSystem.out.println(\"pee,pee!\")\n   }\n}\nclass Car extends Vehicle{\nString modelName=\"Mustang\";\n}\npublic class Main{\npublic static void main(String[] args){\nCar myCar=new Car();\nmyCar.horn();\nSystem.out.println(myCar.brand + \" \" + myCar.modelName);\n   }\n}");
     }
+    public void Polymorphism(){
+        System.out.println("the existence of multiple forms of a trait in a species, or to a function that can operate in different ways is called Polymorphism");
+    }
+    public void Overriding(){
+        System.out.println("\"Overriding\" is when a subclass provides a different implementation of a method already defined in its parent class, while \"polymorphism\" is the concept of allowing objects of different classes to be treated as if they were of the same type\nclass Animal{\npublic void move(){\nSystem.out.println(\"The animal is running\");\n    }\n}\nclass Dog extends Animal{\n@Override\n public void move(){\nSystem.out.println(\"The dog is running\");\n}\n    }\nclass Cat extends Animal{\n@Overide\npublic void move(){\nSystem.out.println(\"The cat is running\");\n  }\n}\npublic class Main{\npublic static void main(String[] args){\nDog d=new Dog();\nCat c=new Cat()\nAnimal a=new Animal();\nd.move();\nc.move();\n   }\n}");
+    }
 }
 
 public class PSyntax {
@@ -314,7 +320,7 @@ public class PSyntax {
                 break;
             case 7:
                 System.out.println(
-                        "1)Class\n2)Objects\n3)atributes & methode\n4)Constructor\n5)Constructor with parameters\n6)Atributes Method\n7)Modifiers\n8)Encapsulation\n9)Inheritance");
+                        "1)Class\n2)Objects\n3)atributes & methode\n4)Constructor\n5)Constructor with parameters\n6)Atributes Method\n7)Modifiers\n8)Encapsulation\n9)Inheritance\n10)Polymorphism\n11)Overriding");
                 int o = sc.nextInt();
                 switch (o) {
                     case 1:
@@ -344,6 +350,12 @@ public class PSyntax {
                     case 9:
                         O.Inheritance();
                         break;
+                    // case 10:
+                    // O.
+                    // break;
+                    case 11:
+                    O.Overriding();
+                    break;
                     default:
                     
                         break;
